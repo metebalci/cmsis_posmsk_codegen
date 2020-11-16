@@ -1,0 +1,6 @@
+REG:
+  - RESERVED: 2
+  - FIELD_1: 3
+  - RESERVED: 2
+  - FIELD_2: 1
+  - RESERVED: 24

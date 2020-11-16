@@ -1,0 +1,4 @@
+#define TEST_REG_FIELD_1_Pos 27U
+#define TEST_REG_FIELD_1_Msk (7UL << TEST_REG_FIELD_1_Pos)
+#define TEST_REG_FIELD_2_Pos 24U
+#define TEST_REG_FIELD_2_Msk (1UL << TEST_REG_FIELD_2_Pos)
