@@ -7,7 +7,9 @@ def main():
     if len(sys.argv) == 1:
         print("Usage: cmsis_posmsk_codegen <reg_definitions.yaml>")
         sys.exit(-1)
-    y = yaml.load(open(sys.argv[1], 'r'), Loader=yaml.Loader)
+    fname = sys.argv[1]
+    prefix = fname.split(".")[0].upper()
+    y = yaml.load(open(fname, 'r'), Loader=yaml.Loader)
     defs = []
     maxlen = 0
     for (reg, fields) in y.items():
@@ -18,10 +20,10 @@ def main():
                 # omit field if it is named RESERVED
                 if field_name != 'RESERVED':
                     pos_def_define = "#define"
-                    pos_def_label = "ETM_%s_%s_Pos" % (reg, field_name)
+                    pos_def_label = "%s_%s_%s_Pos" % (prefix, reg, field_name)
                     pos_def = pos_def_define + " " + pos_def_label
                     pos_def_v = "%uU" % (bit - field_len,)
-                    msk_def = "#define ETM_%s_%s_Msk" % (reg, field_name)
+                    msk_def = "#define %s_%s_%s_Msk" % (prefix, reg, field_name)
                     msk_def_v = "(%uUL << %s)" % (pow(2, field_len) - 1, pos_def_label)
                     defs.append((pos_def, pos_def_v, msk_def, msk_def_v))
                     if len(pos_def) > maxlen:

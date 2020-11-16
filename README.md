@@ -38,11 +38,15 @@ The number next to field name after colon is the number of bits of this field. I
 
 If a field name is called RESERVED, no definition is generated, and its bits are skipped. Since this field is not generated, there can be more than one field named RESERVED. However, any other name (both registers and fields) has to be unique. If you want to keep a reserved field, name it with a number like RESERVED0.
 
-A yaml file like above generates a Pos and Msk definition pair like this one for each field (so in total 3 pairs for example above, omitting the ones called RESERVED):
+In addition to register and field names, a prefix is added to each definition. This prefix is the filename without extension of the input file given. Prefix is implicitly converted to uppercase.
+
+A yaml file named test.yaml with the contents above generates a Pos and Msk definition pair like this one for each field (so in total 3 pairs for example above, omitting the ones called RESERVED):
 
 ```
-#define ETM_REG_1_FIELD_1_Pos   2U
-#define ETM_REG_1_FIELD_1_Msk   (3UL << ETM_REG_1_FIELD_1_Pos)
+#define TEST_REG_1_FIELD_1_Pos   2U
+#define TEST_REG_1_FIELD_1_Msk   (3UL << ETM_REG_1_FIELD_1_Pos)
 ```
 
 An example yaml, `etm.yaml`, is given in github repo (but not in PyPI package). It describes ARM ETM registers.
+
+`test.yaml` and `test.expected` in the repo are used at travis build.

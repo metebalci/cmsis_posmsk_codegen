@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='cmsis_posmsk_codegen',
-    version='1',
+    version='2',
     description='small utility to generate Pos and Msk definitions for registers, particularly for CMSIS projects',
     long_description=long_description,
     long_description_content_type='text/markdown',
