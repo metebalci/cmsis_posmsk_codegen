@@ -1,7 +1,7 @@
 
 # cmsis_posmsk_codegen
 
-[![Build Status](https://travis-ci.com/metebalci/cmsis_posmsk_codegen.svg?branch=master)](https://travis-ci.com/metebalci/cmsis_posmsk_codegen)
+[![Build Status](https://travis-ci.com/metebalci/cmsis_posmsk_codegen.svg?branch=main)](https://travis-ci.com/metebalci/cmsis_posmsk_codegen)
 
 cmsis_posmsk_codegen is a small utility to generate Pos and Msk definitions for registers, particularly for CMSIS projects. It can be used for any project but the Pos and Msk definitions are compatible with other definitions in CMSIS v5.
 
