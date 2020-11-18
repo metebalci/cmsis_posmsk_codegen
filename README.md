@@ -17,7 +17,7 @@ then use:
 $ cmsis_posmsk_codegen reg.yaml
 ```
 
-# Register Definition (yaml)
+# Register Definition File (yaml)
 
 One or more registers are defined in a yaml file like this:
 
@@ -47,6 +47,4 @@ A yaml file named test.yaml with the contents above generates a Pos and Msk defi
 #define TEST_REG_1_FIELD_1_Msk   (3UL << ETM_REG_1_FIELD_1_Pos)
 ```
 
-An example yaml, `etm.yaml`, is given in github repo (but not in PyPI package). It describes ARM ETM registers.
-
-`test.yaml` and `test.expected` in the repo are used at travis build.
+There are some real examples under examples folder.
