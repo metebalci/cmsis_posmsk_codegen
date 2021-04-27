@@ -28,7 +28,7 @@ setup(
 
     keywords='cmsis register pos msk',
     py_modules=['cmsis_posmsk_codegen'],
-    install_requires=['pyyaml==5.3.1'],
+    install_requires=['pyyaml==5.4.1'],
 
     entry_points={
         'console_scripts': [
